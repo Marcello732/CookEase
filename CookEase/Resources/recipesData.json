@@ -21,54 +21,6 @@
         "isFavorite": false,
         "description": "A flavorful Indian curry made with tender chicken, spices, and a rich sauce.",
         "author": "Chef Priya",
-        "imageName": "chicken_curry"
-    },
-    {
-        "id": 3,
-        "name": "Chocolate Cake",
-        "tags": "Dessert, Chocolate, Baking",
-        "time": 60,
-        "difficulty": "Hard",
-        "ratings": 4.9,
-        "isFavorite": true,
-        "description": "A rich and moist chocolate cake layered with creamy chocolate frosting.",
-        "author": "Chef Marie",
-        "imageName": "chocolate_cake"
-    },
-    {
-        "id": 4,
-        "name": "Caesar Salad",
-        "tags": "Salad, Healthy, Quick",
-        "time": 15,
-        "difficulty": "Easy",
-        "ratings": 4.3,
-        "isFavorite": false,
-        "description": "A fresh salad with romaine lettuce, croutons, parmesan cheese, and Caesar dressing.",
-        "author": "Chef Anna",
-        "imageName": "caesar_salad"
-    },
-    {
-        "id": 5,
-        "name": "Beef Stew",
-        "tags": "Dinner, Comfort Food, Slow Cook",
-        "time": 120,
-        "difficulty": "Medium",
-        "ratings": 4.8,
-        "isFavorite": true,
-        "description": "A hearty stew with tender beef, potatoes, carrots, and a savory broth.",
-        "author": "Chef John",
-        "imageName": "beef_stew"
-    },
-    {
-        "id": 6,
-        "name": "Vegetable Stir Fry",
-        "tags": "Vegan, Quick, Healthy",
-        "time": 20,
-        "difficulty": "Easy",
-        "ratings": 4.4,
-        "isFavorite": false,
-        "description": "A colorful stir fry with a variety of fresh vegetables and a flavorful sauce.",
-        "author": "Chef Li",
-        "imageName": "vegetable_stir_fry"
+        "imageName": "pasta"
     }
 ]

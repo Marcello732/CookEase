@@ -10,6 +10,16 @@ import Foundation
 @Observable
 class ModelData {
     var recipes: [Recipe] = load("recipesData.json")
+    
+    func saveRecipes() {
+            let filename = getDocumentsDirectory().appendingPathComponent("recipesData.json")
+            do {
+                let data = try JSONEncoder().encode(recipes)
+                try data.write(to: filename)
+            } catch {
+                print("Failed to save recipes: \(error.localizedDescription)")
+            }
+        }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
@@ -34,4 +44,9 @@ func load<T: Decodable>(_ filename: String) -> T {
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
+}
+
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
 }

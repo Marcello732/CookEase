@@ -12,7 +12,6 @@ struct DiscoverView: View {
     var recipes: [Recipe]
     
     var body: some View {
-        
         NavigationView {
             ScrollView {
                 VStack {

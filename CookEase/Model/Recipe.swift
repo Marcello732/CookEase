@@ -29,4 +29,27 @@ struct Recipe: Hashable, Codable, Identifiable {
     var image: Image {
         Image(imageName)
     }
+    
+    init(id: Int, name: String, tags: String, time: Int, difficulty: String, ratings: Double, isFavorite: Bool, description: String, author: String, imageName: String) {
+        self.id = id
+        self.name = name
+        self.tags = tags
+        self.time = time
+        self.ratings = ratings
+        self.isFavorite = isFavorite
+        self.description = description
+        self.author = author
+        self.imageName = imageName
+        
+        switch difficulty.lowercased() {
+        case "easy":
+            self.difficulty = .easy
+        case "medium":
+            self.difficulty = .medium
+        case "hard":
+            self.difficulty = .hard
+        default:
+            self.difficulty = .easy // Default to easy if something unexpected happens
+        }
+    }
 }
