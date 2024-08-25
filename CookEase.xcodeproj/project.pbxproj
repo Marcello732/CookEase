@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF21CE2E2C791F980022CCDE /* CookEaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE2D2C791F980022CCDE /* CookEaseApp.swift */; };
+		AF21CE302C791F980022CCDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE2F2C791F980022CCDE /* ContentView.swift */; };
+		AF21CE322C791F990022CCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF21CE312C791F990022CCDE /* Assets.xcassets */; };
+		AF21CE352C791F990022CCDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF21CE342C791F990022CCDE /* Preview Assets.xcassets */; };
+		AF21CE3F2C791F990022CCDE /* CookEaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE3E2C791F990022CCDE /* CookEaseTests.swift */; };
+		AF21CE492C791F9A0022CCDE /* CookEaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE482C791F9A0022CCDE /* CookEaseUITests.swift */; };
+		AF21CE4B2C791F9A0022CCDE /* CookEaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE4A2C791F9A0022CCDE /* CookEaseUITestsLaunchTests.swift */; };
+		AF21CE582C79264B0022CCDE /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE572C79264B0022CCDE /* DiscoverView.swift */; };
+		AF21CE5A2C7926AD0022CCDE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE592C7926AD0022CCDE /* SearchView.swift */; };
+		AF21CE5C2C7926B50022CCDE /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE5B2C7926B50022CCDE /* AddView.swift */; };
+		AF21CE5E2C7926BF0022CCDE /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE5D2C7926BF0022CCDE /* FavouritesView.swift */; };
+		AF21CE602C7926C70022CCDE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21CE5F2C7926C70022CCDE /* ProfileView.swift */; };
+		AF5BA0A52C79B48500DDB963 /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0A42C79B48500DDB963 /* RecipeCard.swift */; };
+		AF5BA0A72C79B52100DDB963 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0A62C79B52100DDB963 /* RecipeDetails.swift */; };
+		AF5BA0A92C79B65200DDB963 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0A82C79B65200DDB963 /* Recipe.swift */; };
+		AF5BA0AB2C79B83400DDB963 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0AA2C79B83400DDB963 /* ModelData.swift */; };
+		AF5BA0B02C79B9F900DDB963 /* recipesData.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5BA0AF2C79B9F900DDB963 /* recipesData.json */; };
+		AF5BA0B32C79BC9900DDB963 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF21CE3B2C791F990022CCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF21CE222C791F980022CCDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF21CE292C791F980022CCDE;
+			remoteInfo = CookEase;
+		};
+		AF21CE452C791F9A0022CCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF21CE222C791F980022CCDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF21CE292C791F980022CCDE;
+			remoteInfo = CookEase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF21CE2A2C791F980022CCDE /* CookEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF21CE2D2C791F980022CCDE /* CookEaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookEaseApp.swift; sourceTree = "<group>"; };
+		AF21CE2F2C791F980022CCDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF21CE312C791F990022CCDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF21CE342C791F990022CCDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF21CE3A2C791F990022CCDE /* CookEaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookEaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF21CE3E2C791F990022CCDE /* CookEaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookEaseTests.swift; sourceTree = "<group>"; };
+		AF21CE442C791F9A0022CCDE /* CookEaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookEaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF21CE482C791F9A0022CCDE /* CookEaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookEaseUITests.swift; sourceTree = "<group>"; };
+		AF21CE4A2C791F9A0022CCDE /* CookEaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookEaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF21CE572C79264B0022CCDE /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		AF21CE592C7926AD0022CCDE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AF21CE5B2C7926B50022CCDE /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		AF21CE5D2C7926BF0022CCDE /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		AF21CE5F2C7926C70022CCDE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AF5BA0A42C79B48500DDB963 /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
+		AF5BA0A62C79B52100DDB963 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
+		AF5BA0A82C79B65200DDB963 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		AF5BA0AA2C79B83400DDB963 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		AF5BA0AF2C79B9F900DDB963 /* recipesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipesData.json; path = ../../Resources/recipesData.json; sourceTree = "<group>"; };
+		AF5BA0B12C79B9FD00DDB963 /* recipesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipesData.json; sourceTree = "<group>"; };
+		AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF21CE272C791F980022CCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF21CE372C791F990022CCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF21CE412C791F9A0022CCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF21CE212C791F980022CCDE = {
+			isa = PBXGroup;
+			children = (
+				AF21CE2C2C791F980022CCDE /* CookEase */,
+				AF21CE3D2C791F990022CCDE /* CookEaseTests */,
+				AF21CE472C791F9A0022CCDE /* CookEaseUITests */,
+				AF21CE2B2C791F980022CCDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF21CE2B2C791F980022CCDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF21CE2A2C791F980022CCDE /* CookEase.app */,
+				AF21CE3A2C791F990022CCDE /* CookEaseTests.xctest */,
+				AF21CE442C791F9A0022CCDE /* CookEaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF21CE2C2C791F980022CCDE /* CookEase */ = {
+			isa = PBXGroup;
+			children = (
+				AF5BA0A42C79B48500DDB963 /* RecipeCard.swift */,
+				AF5BA0A62C79B52100DDB963 /* RecipeDetails.swift */,
+				AF5BA0AF2C79B9F900DDB963 /* recipesData.json */,
+				AF5BA0AE2C79B9CC00DDB963 /* Resources */,
+				AF5BA0AD2C79B9C500DDB963 /* View */,
+				AF5BA0AC2C79B9BD00DDB963 /* Model */,
+				AF21CE2D2C791F980022CCDE /* CookEaseApp.swift */,
+				AF21CE312C791F990022CCDE /* Assets.xcassets */,
+				AF21CE332C791F990022CCDE /* Preview Content */,
+			);
+			path = CookEase;
+			sourceTree = "<group>";
+		};
+		AF21CE332C791F990022CCDE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF21CE342C791F990022CCDE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF21CE3D2C791F990022CCDE /* CookEaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF21CE3E2C791F990022CCDE /* CookEaseTests.swift */,
+			);
+			path = CookEaseTests;
+			sourceTree = "<group>";
+		};
+		AF21CE472C791F9A0022CCDE /* CookEaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF21CE482C791F9A0022CCDE /* CookEaseUITests.swift */,
+				AF21CE4A2C791F9A0022CCDE /* CookEaseUITestsLaunchTests.swift */,
+			);
+			path = CookEaseUITests;
+			sourceTree = "<group>";
+		};
+		AF5BA0AC2C79B9BD00DDB963 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF5BA0A82C79B65200DDB963 /* Recipe.swift */,
+				AF5BA0AA2C79B83400DDB963 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF5BA0AD2C79B9C500DDB963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF21CE2F2C791F980022CCDE /* ContentView.swift */,
+				AF21CE572C79264B0022CCDE /* DiscoverView.swift */,
+				AF21CE592C7926AD0022CCDE /* SearchView.swift */,
+				AF21CE5B2C7926B50022CCDE /* AddView.swift */,
+				AF21CE5D2C7926BF0022CCDE /* FavouritesView.swift */,
+				AF21CE5F2C7926C70022CCDE /* ProfileView.swift */,
+				AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF5BA0AE2C79B9CC00DDB963 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF5BA0B12C79B9FD00DDB963 /* recipesData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF21CE292C791F980022CCDE /* CookEase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF21CE4E2C791F9A0022CCDE /* Build configuration list for PBXNativeTarget "CookEase" */;
+			buildPhases = (
+				AF21CE262C791F980022CCDE /* Sources */,
+				AF21CE272C791F980022CCDE /* Frameworks */,
+				AF21CE282C791F980022CCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookEase;
+			productName = CookEase;
+			productReference = AF21CE2A2C791F980022CCDE /* CookEase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF21CE392C791F990022CCDE /* CookEaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF21CE512C791F9A0022CCDE /* Build configuration list for PBXNativeTarget "CookEaseTests" */;
+			buildPhases = (
+				AF21CE362C791F990022CCDE /* Sources */,
+				AF21CE372C791F990022CCDE /* Frameworks */,
+				AF21CE382C791F990022CCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF21CE3C2C791F990022CCDE /* PBXTargetDependency */,
+			);
+			name = CookEaseTests;
+			productName = CookEaseTests;
+			productReference = AF21CE3A2C791F990022CCDE /* CookEaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF21CE432C791F9A0022CCDE /* CookEaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF21CE542C791F9A0022CCDE /* Build configuration list for PBXNativeTarget "CookEaseUITests" */;
+			buildPhases = (
+				AF21CE402C791F9A0022CCDE /* Sources */,
+				AF21CE412C791F9A0022CCDE /* Frameworks */,
+				AF21CE422C791F9A0022CCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF21CE462C791F9A0022CCDE /* PBXTargetDependency */,
+			);
+			name = CookEaseUITests;
+			productName = CookEaseUITests;
+			productReference = AF21CE442C791F9A0022CCDE /* CookEaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF21CE222C791F980022CCDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AF21CE292C791F980022CCDE = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					AF21CE392C791F990022CCDE = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AF21CE292C791F980022CCDE;
+					};
+					AF21CE432C791F9A0022CCDE = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = AF21CE292C791F980022CCDE;
+					};
+				};
+			};
+			buildConfigurationList = AF21CE252C791F980022CCDE /* Build configuration list for PBXProject "CookEase" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF21CE212C791F980022CCDE;
+			productRefGroup = AF21CE2B2C791F980022CCDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF21CE292C791F980022CCDE /* CookEase */,
+				AF21CE392C791F990022CCDE /* CookEaseTests */,
+				AF21CE432C791F9A0022CCDE /* CookEaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF21CE282C791F980022CCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF21CE352C791F990022CCDE /* Preview Assets.xcassets in Resources */,
+				AF21CE322C791F990022CCDE /* Assets.xcassets in Resources */,
+				AF5BA0B02C79B9F900DDB963 /* recipesData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF21CE382C791F990022CCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF21CE422C791F9A0022CCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF21CE262C791F980022CCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF21CE5A2C7926AD0022CCDE /* SearchView.swift in Sources */,
+				AF5BA0A92C79B65200DDB963 /* Recipe.swift in Sources */,
+				AF21CE302C791F980022CCDE /* ContentView.swift in Sources */,
+				AF21CE5C2C7926B50022CCDE /* AddView.swift in Sources */,
+				AF21CE2E2C791F980022CCDE /* CookEaseApp.swift in Sources */,
+				AF5BA0AB2C79B83400DDB963 /* ModelData.swift in Sources */,
+				AF5BA0A52C79B48500DDB963 /* RecipeCard.swift in Sources */,
+				AF5BA0B32C79BC9900DDB963 /* RecipeRow.swift in Sources */,
+				AF21CE5E2C7926BF0022CCDE /* FavouritesView.swift in Sources */,
+				AF21CE602C7926C70022CCDE /* ProfileView.swift in Sources */,
+				AF21CE582C79264B0022CCDE /* DiscoverView.swift in Sources */,
+				AF5BA0A72C79B52100DDB963 /* RecipeDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF21CE362C791F990022CCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF21CE3F2C791F990022CCDE /* CookEaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF21CE402C791F9A0022CCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF21CE4B2C791F9A0022CCDE /* CookEaseUITestsLaunchTests.swift in Sources */,
+				AF21CE492C791F9A0022CCDE /* CookEaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF21CE3C2C791F990022CCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF21CE292C791F980022CCDE /* CookEase */;
+			targetProxy = AF21CE3B2C791F990022CCDE /* PBXContainerItemProxy */;
+		};
+		AF21CE462C791F9A0022CCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF21CE292C791F980022CCDE /* CookEase */;
+			targetProxy = AF21CE452C791F9A0022CCDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF21CE4C2C791F9A0022CCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF21CE4D2C791F9A0022CCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF21CE4F2C791F9A0022CCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CookEase/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookEase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF21CE502C791F9A0022CCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CookEase/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookEase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF21CE522C791F9A0022CCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookEaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookEase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CookEase";
+			};
+			name = Debug;
+		};
+		AF21CE532C791F9A0022CCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookEaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookEase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CookEase";
+			};
+			name = Release;
+		};
+		AF21CE552C791F9A0022CCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookEaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CookEase;
+			};
+			name = Debug;
+		};
+		AF21CE562C791F9A0022CCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookEaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CookEase;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF21CE252C791F980022CCDE /* Build configuration list for PBXProject "CookEase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF21CE4C2C791F9A0022CCDE /* Debug */,
+				AF21CE4D2C791F9A0022CCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF21CE4E2C791F9A0022CCDE /* Build configuration list for PBXNativeTarget "CookEase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF21CE4F2C791F9A0022CCDE /* Debug */,
+				AF21CE502C791F9A0022CCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF21CE512C791F9A0022CCDE /* Build configuration list for PBXNativeTarget "CookEaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF21CE522C791F9A0022CCDE /* Debug */,
+				AF21CE532C791F9A0022CCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF21CE542C791F9A0022CCDE /* Build configuration list for PBXNativeTarget "CookEaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF21CE552C791F9A0022CCDE /* Debug */,
+				AF21CE562C791F9A0022CCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF21CE222C791F980022CCDE /* Project object */;
+}
