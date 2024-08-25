@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeRow: View {
+    @Environment(ModelData.self) var modelData
     var items: [Recipe]
     var header: String
     
@@ -38,5 +39,5 @@ struct RecipeRow: View {
 }
 
 #Preview {
-    RecipeRow(items: recipes, header: "Pasta")
+    RecipeRow(items: ModelData().recipes, header: "Pasta").environment(ModelData())
 }

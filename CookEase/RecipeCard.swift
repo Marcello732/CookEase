@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct RecipeCard: View {
+    @Environment(ModelData.self) var modelData
     var recipe: Recipe
     
+    var recipeIndex: Int {
+            modelData.recipes.firstIndex(where: { $0.id == recipe.id })!
+        }
+    
     var body: some View {
+        @Bindable var modelData = modelData
+        
         ZStack (alignment: .bottomLeading) {
             recipe.image
                 .resizable()
@@ -49,10 +56,8 @@ struct RecipeCard: View {
                     
                     Spacer()
                                         
-                    Image(systemName: "heart")
-                        .font(.system(size: 24))
-                        .foregroundStyle(Color.mint)
-                        .padding(.horizontal, 12)
+                    FavouriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
+                        
                 }
                 .padding(10)
                 .background(Color.second)
@@ -70,5 +75,5 @@ struct RecipeCard: View {
 }
 
 #Preview {
-    RecipeCard(recipe: recipes[0])
+    RecipeCard(recipe: ModelData().recipes[0])
 }

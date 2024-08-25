@@ -25,6 +25,7 @@
 		AF5BA0AB2C79B83400DDB963 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0AA2C79B83400DDB963 /* ModelData.swift */; };
 		AF5BA0B02C79B9F900DDB963 /* recipesData.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5BA0AF2C79B9F900DDB963 /* recipesData.json */; };
 		AF5BA0B32C79BC9900DDB963 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */; };
+		AF6E2FB32C7B833600A50A73 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6E2FB22C7B833600A50A73 /* FavouriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		AF5BA0AF2C79B9F900DDB963 /* recipesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipesData.json; path = ../../Resources/recipesData.json; sourceTree = "<group>"; };
 		AF5BA0B12C79B9FD00DDB963 /* recipesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipesData.json; sourceTree = "<group>"; };
 		AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+		AF6E2FB22C7B833600A50A73 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				AF21CE2D2C791F980022CCDE /* CookEaseApp.swift */,
 				AF21CE312C791F990022CCDE /* Assets.xcassets */,
 				AF21CE332C791F990022CCDE /* Preview Content */,
+				AF6E2FB22C7B833600A50A73 /* FavouriteButton.swift */,
 			);
 			path = CookEase;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				AF5BA0A52C79B48500DDB963 /* RecipeCard.swift in Sources */,
 				AF5BA0B32C79BC9900DDB963 /* RecipeRow.swift in Sources */,
 				AF21CE5E2C7926BF0022CCDE /* FavouritesView.swift in Sources */,
+				AF6E2FB32C7B833600A50A73 /* FavouriteButton.swift in Sources */,
 				AF21CE602C7926C70022CCDE /* ProfileView.swift in Sources */,
 				AF21CE582C79264B0022CCDE /* DiscoverView.swift in Sources */,
 				AF5BA0A72C79B52100DDB963 /* RecipeDetails.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DiscoverView: View {
+    @Environment(ModelData.self) var modelData
     var recipes: [Recipe]
     
     var body: some View {
@@ -33,5 +34,7 @@ struct DiscoverView: View {
     }
 
 #Preview {
-    DiscoverView(recipes: recipes)
+    let modelData = ModelData()
+    return DiscoverView(recipes: modelData.recipes)
+        .environment(modelData)
 }

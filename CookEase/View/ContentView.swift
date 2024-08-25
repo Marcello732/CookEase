@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Tab = .discover
+    @Environment(ModelData.self) var modelData
 
         enum Tab {
             case discover
@@ -21,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection) {
                     
-            DiscoverView(recipes: recipes)
+            DiscoverView(recipes: modelData.recipes)
                 .tabItem {
                     Label("Discover", systemImage: "house")
                 }
@@ -58,5 +59,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environment(ModelData())
 }
