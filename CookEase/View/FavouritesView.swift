@@ -8,11 +8,40 @@
 import SwiftUI
 
 struct FavouritesView: View {
+    @Environment(ModelData.self) var modelData
+    var recipes: [Recipe]
+    
+    var filteredRecipes: [Recipe] {
+            recipes.filter { landmark in
+                (landmark.isFavorite)
+            }
+        }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        @Bindable var modelData = modelData
+        
+        NavigationView {
+            ScrollView {
+                VStack {
+                    RecipeRow(items: filteredRecipes, header: "Pasta")
+                    .navigationTitle("Favorites")
+                    
+                    Spacer()
+                    
+                    RecipeRow(items: filteredRecipes, header: "Burger")
+                    
+                    Spacer()
+                    
+                    RecipeRow(items: filteredRecipes, header: "Pizza")
+                }
+            }
+                
+        }
     }
 }
 
 #Preview {
-    FavouritesView()
+    let modelData = ModelData()
+    return FavouritesView(recipes: modelData.recipes)
+        .environment(modelData)
 }

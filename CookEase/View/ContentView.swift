@@ -41,14 +41,14 @@ struct ContentView: View {
                 }
                 .tag(Tab.add)
             
-            FavouritesView()
+            FavouritesView(recipes: modelData.recipes)
                 .tabItem {
                     Label("Favourites", systemImage: "heart")
 
                 }
                 .tag(Tab.favourites)
             
-            ProfileView()
+            ProfileView(recipes: modelData.recipes)
                 .tabItem {
                     Label("Profile", systemImage: "person")
 
