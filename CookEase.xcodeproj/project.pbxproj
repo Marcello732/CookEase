@@ -66,7 +66,6 @@
 		AF5BA0A82C79B65200DDB963 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		AF5BA0AA2C79B83400DDB963 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		AF5BA0AF2C79B9F900DDB963 /* recipesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipesData.json; path = ../../Resources/recipesData.json; sourceTree = "<group>"; };
-		AF5BA0B12C79B9FD00DDB963 /* recipesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipesData.json; sourceTree = "<group>"; };
 		AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
 		AF6E2FB22C7B833600A50A73 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +121,6 @@
 				AF5BA0A42C79B48500DDB963 /* RecipeCard.swift */,
 				AF5BA0A62C79B52100DDB963 /* RecipeDetails.swift */,
 				AF5BA0AF2C79B9F900DDB963 /* recipesData.json */,
-				AF5BA0AE2C79B9CC00DDB963 /* Resources */,
 				AF5BA0AD2C79B9C500DDB963 /* View */,
 				AF5BA0AC2C79B9BD00DDB963 /* Model */,
 				AF21CE2D2C791F980022CCDE /* CookEaseApp.swift */,
@@ -179,14 +177,6 @@
 				AF5BA0B22C79BC9900DDB963 /* RecipeRow.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AF5BA0AE2C79B9CC00DDB963 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AF5BA0B12C79B9FD00DDB963 /* recipesData.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

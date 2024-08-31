@@ -11,10 +11,8 @@ struct FavouritesView: View {
     @Environment(ModelData.self) var modelData
     var recipes: [Recipe]
     
-    var filteredRecipes: [Recipe] {
-            recipes.filter { landmark in
-                (landmark.isFavorite)
-            }
+    func filteredRecipes(for category: String) -> [Recipe] {
+        return recipes.filter { $0.category.rawValue == category && $0.isFavorite }
         }
     
     var body: some View {
@@ -23,16 +21,24 @@ struct FavouritesView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    RecipeRow(items: filteredRecipes, header: "Pasta")
-                    .navigationTitle("Favorites")
+                    RecipeRow(items: filteredRecipes(for: "Pasta"), header: "Pasta")
+                    .navigationTitle("Discover")
                     
                     Spacer()
                     
-                    RecipeRow(items: filteredRecipes, header: "Burger")
+                    RecipeRow(items: filteredRecipes(for: "Burger"), header: "Burger")
                     
                     Spacer()
                     
-                    RecipeRow(items: filteredRecipes, header: "Pizza")
+                    RecipeRow(items: filteredRecipes(for: "Pizza"), header: "Pizza")
+                    
+                    Spacer()
+                    
+                    RecipeRow(items: filteredRecipes(for: "Salad"), header: "Salad")
+                    
+                    Spacer()
+                    
+                    RecipeRow(items: filteredRecipes(for: "Soup"), header: "Soup")
                 }
             }
                 

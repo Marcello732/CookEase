@@ -11,20 +11,32 @@ struct DiscoverView: View {
     @Environment(ModelData.self) var modelData
     var recipes: [Recipe]
     
+    func filteredRecipes(for category: String) -> [Recipe] {
+        return recipes.filter { $0.category.rawValue == category }
+        }
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    RecipeRow(items: recipes, header: "Pasta")
+                    RecipeRow(items: filteredRecipes(for: "Pasta"), header: "Pasta")
                     .navigationTitle("Discover")
                     
                     Spacer()
                     
-                    RecipeRow(items: recipes, header: "Burger")
+                    RecipeRow(items: filteredRecipes(for: "Burger"), header: "Burger")
                     
                     Spacer()
                     
-                    RecipeRow(items: recipes, header: "Pizza")
+                    RecipeRow(items: filteredRecipes(for: "Pizza"), header: "Pizza")
+                    
+                    Spacer()
+                    
+                    RecipeRow(items: filteredRecipes(for: "Salad"), header: "Salad")
+                    
+                    Spacer()
+                    
+                    RecipeRow(items: filteredRecipes(for: "Soup"), header: "Soup")
                 }
             }
                 

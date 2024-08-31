@@ -32,7 +32,7 @@ struct ProfileView: View {
                             .clipShape(Circle())
                         Spacer()
                         VStack(alignment: .center) {
-                            Text("15")
+                            Text("10")
                                 .font(.title2)
                                 .bold()
                             Text("recipes")
@@ -40,23 +40,23 @@ struct ProfileView: View {
                         Spacer()
                         
                         VStack(alignment: .center) {
-                            Text("15")
+                            Text("150")
                                 .font(.title2)
                                 .bold()
-                            Text("recipes")
+                            Text("followers")
                         }
                         Spacer()
                         
                         VStack(alignment: .center) {
-                            Text("15")
+                            Text("342")
                                 .font(.title2)
                                 .bold()
-                            Text("recipes")
+                            Text("following")
                         }
                         Spacer()
                     }.padding(.top, 12)
                     
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et turpis et mi imperdiet semper a vel nulla. Nullam non massa efficitur, euismod tellus ")
+                    Text("🌍 Food Enthusiast | 🍕 Pizza Lover | 🍝 Pasta Aficionado 🍳 Home Chef Sharing My Favorite Recipes ✨ Cooking Up Comfort Food & Global Flavors 📸 Capturing Culinary Creations | 📍 NYC 👇 Check out my latest dish!")
                         .font(.callout)
                         .padding(.horizontal, 24)
                         .padding(.top, 12)

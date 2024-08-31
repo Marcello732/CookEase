@@ -33,15 +33,7 @@ struct RecipeDetails: View {
                     }
                     .tabViewStyle(.page)
                     
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Image(systemName: "square.and.arrow.up")
-                            .font(.title2)
-                    })
-                    .foregroundStyle(Color.first)
-                    .frame(width: 47, height: 47)
-                    .background(Color.second)
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                    .position(x: UIScreen.main.bounds.width - 50, y: 70)
+//
                     
                     FavouriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
                         .position(x: UIScreen.main.bounds.width - 50, y: 390)
@@ -106,7 +98,7 @@ struct RecipeDetails: View {
                     .bold()
                 HStack {
                     HStack {
-                        Image("profile")
+                        Image(recipe.author)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 50, height: 50)
@@ -131,8 +123,27 @@ struct RecipeDetails: View {
             }
             .padding(.top, 12)
             .padding(.horizontal, 30)
+            .padding(.bottom, 100)
             
     }
+        .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            // Your share action here
+                        }) {
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                Image(systemName: "square.and.arrow.up")
+                                    .font(.title3)
+                            })
+                            .foregroundStyle(Color.accentColor)
+//                            .frame(width: 40, height: 40)
+//                            .background(Color.second)
+//                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+//                            .position(x: UIScreen.main.bounds.width - 50, y: 70)
+                        }
+                    }
+                }
         .ignoresSafeArea()
     }
 }

@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct AddView: View {
     @Environment(ModelData.self) var modelData
     @State private var title: String = ""
     @State private var description: String = ""
+    @State private var tags: String = ""
     
     @State private var selectedDifficulty = "Choose difficulty"
     let difficulties = ["Easy", "Medium", "Hard"]
     
     @State private var selectedCategory = "Choose category"
-    let categories = ["Pasta", "Burger", "Pizza"]
+    let categories = ["Pasta", "Burger", "Pizza", "Salad", "Soup"]
     
     @State private var isPickerPresented = false
     @State var hours: Int = 0
@@ -25,13 +27,18 @@ struct AddView: View {
     
     @State private var showingAlert = false
     
+    @State private var showingImagePicker = false
+    @State private var images: [UIImage] = []
+    
     var body: some View {
         @Bindable var modelData = modelData
         
         NavigationView {
             ScrollView {
                 VStack {
-                    Button(action: {}, label: {
+                    Button(action: {
+                        showingImagePicker = true
+                    }, label: {
                         Label("Upload images", systemImage: "plus").foregroundStyle(Color.first)
                     })
                     .padding()
@@ -45,6 +52,22 @@ struct AddView: View {
                     .padding(.top, 24)
                     .navigationTitle("Add new recipe")
                     
+                    // Display uploaded images
+                    if !images.isEmpty {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
+                            ForEach(images, id: \.self) { image in
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .padding(2)
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    
+                    // Other input fields...
                     VStack {
                         HStack {
                             Text("Title")
@@ -67,6 +90,22 @@ struct AddView: View {
                                 .padding(.horizontal, 40)
                                 
                             TextField("Description", text: $description)
+                                .padding(.trailing, 40)
+                                .foregroundStyle(Color.secondary)
+                        }
+                        Rectangle()
+                            .fill(Color.accentColor)
+                            .padding(.horizontal, 40)
+                            .frame(height: 2)
+                            .offset(CGSize(width: 0, height: -5))
+                    }.padding(.top, 24)
+                    
+                    VStack {
+                        HStack {
+                            Text("Tags")
+                                .padding(.horizontal, 40)
+                                
+                            TextField("Tags", text: $tags)
                                 .padding(.trailing, 40)
                                 .foregroundStyle(Color.secondary)
                         }
@@ -145,6 +184,12 @@ struct AddView: View {
                         Button(categories[2], action: {
                             selectedCategory = categories[2]
                         })
+                        Button(categories[3], action: {
+                            selectedCategory = categories[3]
+                        })
+                        Button(categories[4], action: {
+                            selectedCategory = categories[4]
+                        })
                     }.padding()
                         .frame(width: 175, height: 50)
                         .overlay(
@@ -163,6 +208,7 @@ struct AddView: View {
                         selectedDifficulty = "Choose difficulty"
                         selectedCategory = "Choose category"
                         estimatedTime = "Estimate time"
+                        images.removeAll() // Clear images after saving
                     }, label: {
                         Label(
                             "Add",
@@ -183,24 +229,98 @@ struct AddView: View {
             }
                 
         }
+        .sheet(isPresented: $showingImagePicker, content: {
+            ImagePicker(images: $images)
+        })
     }
+    
     func addRecipe() {
-            let newRecipe = Recipe(
-                id: modelData.recipes.count + 1,
-                name: title,
-                tags: selectedCategory,
-                time: hours * 60 + minutes,
-                difficulty: selectedDifficulty,
-                ratings: 0,
-                isFavorite: false,
-                description: description,
-                author: "Unknown",
-                imageName: "pasta"
-            )
+        let imageNames = saveImages()
+        
+        let newRecipe = Recipe(
+            id: modelData.recipes.count + 1,
+            name: title,
+            tags: tags,
+            time: hours * 60 + minutes,
+            difficulty: selectedDifficulty,
+            ratings: 0,
+            isFavorite: false,
+            description: description,
+            author: "Oscar",
+            imageName: imageNames.first ?? "default", // Placeholder or first image name from the images array
+            category: selectedCategory
+        )
+        
+        modelData.recipes.append(newRecipe)
+        modelData.saveRecipes()
+    }
+    
+    func saveImages() -> [String] {
+            var savedImageNames: [String] = []
+            let fileManager = FileManager.default
             
-            modelData.recipes.append(newRecipe)
-            modelData.saveRecipes()
+            for (index, image) in images.enumerated() {
+                if let imageData = image.jpegData(compressionQuality: 0.8) {
+                    let imageName = "\(title)_\(index).jpg"
+                    if let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+                        let fileURL = documentsDirectory.appendingPathComponent(imageName)
+                        do {
+                            try imageData.write(to: fileURL)
+                            savedImageNames.append(imageName)
+                        } catch {
+                            print("Error saving image: \(error)")
+                        }
+                    }
+                }
+            }
+            
+            return savedImageNames
         }
+}
+
+// ImagePicker Component
+struct ImagePicker: UIViewControllerRepresentable {
+    @Binding var images: [UIImage]
+    
+    func makeUIViewController(context: Context) -> PHPickerViewController {
+        var config = PHPickerConfiguration()
+        config.selectionLimit = 5 // Adjust the limit as needed
+        config.filter = .images
+        
+        let picker = PHPickerViewController(configuration: config)
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, PHPickerViewControllerDelegate {
+        var parent: ImagePicker
+        
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+        
+        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            picker.dismiss(animated: true)
+            
+            for result in results {
+                if result.itemProvider.canLoadObject(ofClass: UIImage.self) {
+                    result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
+                        if let uiImage = image as? UIImage {
+                            DispatchQueue.main.async {
+                                self.parent.images.append(uiImage)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 #Preview {

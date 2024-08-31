@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+//    init() {
+//            UITabBar.appearance().unselectedItemTintColor = UIColor.black
+//        } //TODO: decide which verion better
+//    
     @State private var selection: Tab = .discover
     @Environment(ModelData.self) var modelData
 

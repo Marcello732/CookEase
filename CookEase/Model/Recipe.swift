@@ -30,7 +30,16 @@ struct Recipe: Hashable, Codable, Identifiable {
         Image(imageName)
     }
     
-    init(id: Int, name: String, tags: String, time: Int, difficulty: String, ratings: Double, isFavorite: Bool, description: String, author: String, imageName: String) {
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case pasta = "Pasta"
+        case burger = "Burger"
+        case pizza = "Pizza"
+        case salad = "Salad"
+        case soup = "Soup"
+    }
+    
+    init(id: Int, name: String, tags: String, time: Int, difficulty: String, ratings: Double, isFavorite: Bool, description: String, author: String, imageName: String, category: String) {
         self.id = id
         self.name = name
         self.tags = tags
@@ -50,6 +59,21 @@ struct Recipe: Hashable, Codable, Identifiable {
             self.difficulty = .hard
         default:
             self.difficulty = .easy // Default to easy if something unexpected happens
+        }
+        
+        switch category.lowercased() {
+        case "pasta":
+            self.category = .pasta
+        case "burger":
+            self.category = .burger
+        case "pizza":
+            self.category = .pizza
+        case "salad":
+            self.category = .salad
+        case "soup":
+            self.category = .soup
+        default:
+            self.category = .pasta // Default to easy if something unexpected happens
         }
     }
 }
